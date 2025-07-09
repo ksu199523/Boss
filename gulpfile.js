@@ -11,7 +11,7 @@ const avif = require('gulp-avif');
 const newer = require('gulp-newer');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
-const include = svgstore('gulp-svgstore');
+const svgstore = require('gulp-svgstore');
 
 function sprites(){
   return src('app/images/sprite/*.svg')
@@ -53,10 +53,10 @@ function images() {
 
 
 function styles() {
-  return src('app/scss/style.scss')
+  return src('app/scss/*.scss')
+    .pipe(scss({ style: 'compressed' }))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], cascade: false }))
     .pipe(concat('style.min.css'))
-    .pipe(scss({ style: 'compressed' }))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream());
 }
@@ -74,7 +74,7 @@ function scripts() {
 
 function watching() {
   browserSync.init({ server: { baseDir: 'app/' } });
-  watch(['app/scss/style.scss'], styles);
+  watch(['app/scss/*.scss'], styles);
   watch(['app/images/src'], images);
   watch(['app/images/sprite'], sprites);
   watch(['app/pages/*', 'app/components/*'], pages);
