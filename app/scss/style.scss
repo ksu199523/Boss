@@ -29,7 +29,7 @@ body {
   &__lang {
     display: flex;
 
-    &--active {
+    &-link--active {
       @extend %opensans-700;
     }
   }
@@ -64,13 +64,16 @@ body {
 }
 
 .top {
-  min-height: 90vh;
+  height: calc(100vh - 180px);
   background-repeat: no-repeat;
   background-size: cover;
 
   &__content {
-    padding: 260px 0;
     max-width: 519px;
+    height: calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__title {
@@ -85,7 +88,8 @@ body {
     display: inline-block;
     background-color: vars.$color-primary;
     font-size: 20px;
-    color: #fff;
+    color: vars.$accent-text;
+    align-self: flex-start;
     text-transform: uppercase;
     padding: 13px 39px;
     border-radius: 3px;
@@ -94,12 +98,12 @@ body {
 
 .new-collection {
   &__inner {
-    padding: 150px 0 60px;
+    padding: 150px 40px 90px;
     display: flex;
   }
 
   &__content {
-    padding: 75px 0;
+    padding: 75px 0 0;
     max-width: 417px;
     display: flex;
     flex-direction: column;
@@ -116,16 +120,19 @@ body {
     font-size: 20px;
   }
 
-  &__text+.new-collection__text {
-    margin-top: 25px;
+  &__text-box{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
+  
 
   &__btn {
     display: inline-block;
     border: 1px solid vars.$color-primary;
     padding: 10px 66px;
     align-self: flex-start;
-    margin-top: 75px;
+    margin-top: auto;
   }
 
   &__img {
@@ -166,11 +173,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid vars.$accent-text;
   }
 
   &__menu-item {
-    color: #fff;
+    color: vars.$accent-text;
   }
 
   &__menu-link {
@@ -181,7 +188,7 @@ body {
     padding: 50px 0 80px;
     display: flex;
     justify-content: space-between;
-    color: #fff;
+    color: vars.$accent-text;
   }
 
   &__element-title {
@@ -191,6 +198,8 @@ body {
 
   &__adress {
     line-height: 1.8;
+    display: flex;
+    flex-direction: column;
   }
 
   &__element-item {
@@ -207,12 +216,12 @@ body {
     display: block;
     width: 100%;
     border: none;
-    border-bottom: 1px solid #fff;
-    color: #fff;
+    border-bottom: 1px solid vars.$accent-text;
+    color: vars.$accent-text;
     padding: 1px 30px 5px 0;
 
     &::placeholder {
-      color: #fff;
+      color: vars.$accent-text;
     }
   }
 
@@ -220,7 +229,6 @@ body {
     position: absolute;
     top: 5px;
     right: 0;
-    @extend %button-reset;
   }
 
   &__element-social {
@@ -236,7 +244,7 @@ body {
     padding: 7px 0 9px;
     background-color: vars.$color-primary;
     font-size: 11px;
-    color: #fff;
+    color: vars.$accent-text;
   }
 
   &__bottom-inner {
@@ -260,3 +268,231 @@ body {
     }
   }
 }
+.join-us {
+  background-color: vars.$color-accent;
+  &__inner {
+    display: flex;
+    gap: 40px;
+    color: vars.$accent-text;
+  }
+
+  &__img {
+   object-fit: cover;
+   height: 100%;
+  }
+
+  &__content {
+    padding: 94px 0;
+    max-width: 578px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @extend %lora-400;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  &__input {
+    padding: 20px 0 10px 0;
+    background-color: vars.$color-accent;
+    border: none;
+    font-size: 20px;
+    border-bottom: 1.2px solid vars.$color-text;
+    &::placeholder{
+      color: vars.$accent-text;
+    }
+  }
+
+  &__btn {
+    padding: 12px 248px;
+    background-color: vars.$color-primary;
+    color: vars.$accent-text;
+    font-size: 20px;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    border-radius: 3px;
+  }
+
+  &__caption {
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
+.home-reviews {
+  padding: 90px 40px 293px;
+  &__inner {
+  display: flex;
+  gap: 40px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    color: vars.$color-primary;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    max-width: 541px;
+
+  }
+
+  &__text {
+    color: vars.$color-text;
+  }
+
+  &__text-border {
+    @extend %lora-400;
+    font-size: 20px;
+    max-width: 417px;
+    background-color: vars.$color-accent;
+    color: vars.$accent-text;
+    padding: 20px 27px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box-link {
+    padding: 10px 246px;
+    border: 1px solid vars.$color-primary;
+    white-space: nowrap;
+    margin-top: auto;
+  }
+}
+.our-advantages {
+  color: vars.$accent-text;
+  background-color: vars.$color-accent;
+  &__inner {
+    display: flex;
+    gap: 200px;
+    position: relative;
+  }
+
+  &__img{
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+  }
+
+  &__content {
+    margin-left: auto;
+    padding-bottom: 68px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    margin: 50px 0;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    column-count: 2;
+    gap: 80px;
+  }
+
+  &__item {
+    font-size: 20px;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    &::before{
+      content: '·';
+      position: absolute;
+      left: 10px;
+      font-weight: 700;
+    }
+  }
+}
+
+.our-blog {
+  padding: 150px 40px 90px;
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__content {
+   grid-column: span 2;
+  }
+
+  &__content-title {
+    @extend %lora-400;
+    font-size: 45px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  &__content-text{
+    max-width: 542px;
+    margin-bottom: 70px;
+    color: vars.$color-text;
+  }
+  
+  &__content-caption {
+    @extend %lora-400;
+    font-size: 20px;
+    padding: 20px 0 5px;
+    color: vars.$color-text;
+  }
+
+  &__content-date {
+    @extend %opensans-300;
+    color: vars.$color-text;
+    font-size: 16px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    max-height: 585px;
+  }
+
+  &__box-date {
+    @extend %opensans-300;
+    color: vars.$color-text;
+    font-size: 16px;
+    padding: 20px 0 5px;
+  }
+
+  &__box-caption {
+    @extend %lora-400;
+    font-size: 20px;
+    color: vars.$color-text;
+  }
+
+  &__box-link {
+    border: 1px solid vars.$color-primary;
+    padding: 10px 107px;
+    margin-top: auto;
+    display: inline-block;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+}
+
+
+
+

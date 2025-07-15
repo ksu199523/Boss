@@ -13,48 +13,51 @@ const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
 const svgstore = require('gulp-svgstore');
 
-function sprites(){
+function sprites() {
   return src('app/images/sprite/*.svg')
-  .pipe(svgstore())
-  .pipe(dest('app/images'))
+    .pipe(svgstore())
+    .pipe(dest('app/images'));
 }
 
-function pages(){
+function pages() {
   return src('app/pages/*.html')
-  .pipe (include({
-    includePaths: 'app/components'
-  }))
-  .pipe(dest('app'))
-  .pipe(browserSync.stream())
+    .pipe(include({ includePaths: 'app/components' }))
+    .pipe(dest('app'))
+    .pipe(browserSync.stream());
 }
 
 function fonts() {
   return src('app/fonts/*.ttf')
-  .pipe(ttf2woff2())
-  .pipe(dest('app/fonts'))
+    .pipe(ttf2woff2())
+    .pipe(dest('app/fonts'));
 }
 
-function images() {
+function imagesAvif() {
   return src(['app/images/src/*.*', '!app/images/src/*.svg'])
-  .pipe(newer('app/images'))
-  .pipe(avif({ quality: 50 }))
-
-  .pipe(src('app/images/src/*.*'))
-  .pipe(webp())
-
-  .pipe(src('app/images/src/*.*'))
-  .pipe(newer('app/images'))
-  .pipe(imagemin())
-
-  .pipe(dest('app/images'))
-
+    .pipe(newer('app/images'))
+    .pipe(avif({ quality: 50 }))
+    .pipe(dest('app/images'));
 }
 
+function imagesWebp() {
+  return src(['app/images/src/*.*', '!app/images/src/*.svg'])
+    .pipe(newer('app/images'))
+    .pipe(webp())
+    .pipe(dest('app/images'));
+}
 
+function imagesMin() {
+  return src(['app/images/src/*.*', '!app/images/src/*.svg'])
+    .pipe(newer('app/images'))
+    .pipe(imagemin())
+    .pipe(dest('app/images'));
+}
+
+const images = parallel(imagesAvif, imagesWebp, imagesMin);
 
 function styles() {
   return src('app/scss/*.scss')
-    .pipe(scss({ style: 'compressed' }))
+    .pipe(scss({ style: 'compressed' }).on('error', scss.logError))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], cascade: false }))
     .pipe(concat('style.min.css'))
     .pipe(dest('app/css'))
@@ -73,17 +76,20 @@ function scripts() {
 }
 
 function watching() {
-  browserSync.init({ server: { baseDir: 'app/' } });
-  watch(['app/scss/*.scss'], styles);
-  watch(['app/images/src'], images);
-  watch(['app/images/sprite'], sprites);
-  watch(['app/pages/*', 'app/components/*'], pages);
-  watch(['app/js/main.js'], scripts);
-  watch(['app/*.html']).on('change', browserSync.reload);
+  browserSync.init({
+    server: { baseDir: 'app/' },
+    ui: false // 🔧 отключаем browser-sync-ui
+  });
+  watch('app/scss/**/*.scss', styles);
+  watch('app/images/src/**/*.*', images);
+  watch('app/images/sprite/*.svg', sprites);
+  watch(['app/pages/*.html', 'app/components/**/*.html'], pages);
+  watch('app/js/main.js', scripts);
+  watch('app/*.html').on('change', browserSync.reload);
 }
 
 function cleanDist() {
-  return src('dist').pipe(clean());
+  return src('dist', { allowEmpty: true }).pipe(clean());
 }
 
 function building() {
@@ -94,18 +100,17 @@ function building() {
     'app/images/*.*',
     'app/fonts/*.woff2'
   ], { base: 'app' })
-  .pipe(dest('dist'));
+    .pipe(dest('dist'));
 }
 
 exports.styles = styles;
-exports.watching = watching;
 exports.scripts = scripts;
 exports.images = images;
 exports.fonts = fonts;
 exports.sprites = sprites;
 exports.pages = pages;
-exports.building = building;
 exports.cleanDist = cleanDist;
+exports.building = building;
 
 exports.build = series(cleanDist, building);
 exports.default = parallel(styles, images, sprites, pages, scripts, watching);

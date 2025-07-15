@@ -3,24 +3,24 @@
     <nav class="footer__menu">
       <ul class="footer__menu-list">
         <li class="footer__menu-item">
-          <a href="#" class="footer__menu-link">Catalog</a>
+          <a class="footer__menu-link" href="#">Catalog</a>
         </li>
         <li class="footer__menu-item">
-          <a href="#" class="footer__menu-link">Collections</a>
+          <a class="footer__menu-link" href="#" >Collections</a>
         </li>
         <li class="footer__menu-item">
-          <a href="#" class="footer__menu-link">About</a>
+          <a class="footer__menu-link" href="#" >About</a>
         </li>
         <li class="footer__menu-item">
-          <a href="#" class="footer__menu-link">
+          <a class="footer__menu-link" href="#" >
             <img class="footer__logo" src="images/footer-logo.svg" alt="footer logo">
           </a>
         </li>
         <li class="footer__menu-item">
-          <a href="#" class="footer__menu-link">Book your appointment</a>
+          <a class="footer__menu-link" href="#" >Book your appointment</a>
         </li>
         <li class="footer__menu-item">
-          <a href="#" class="footer__menu-link">Contact</a>
+          <a class="footer__menu-link" href="#">Contact</a>
         </li>
       </ul>
     </nav>
@@ -29,8 +29,8 @@
         <p class="footer__element-title">Location</p>
         <ul class="footer__element-list">
           <address class="footer__adress">
-            Ukraine, Kyiv,<br>
-            st. Voitenko, 67
+            <span>Ukraine, Kyiv,</span>
+            <span>st. Voitenko, 67</span>
           </address>
         </ul>
       </div>
@@ -38,12 +38,12 @@
         <p class="footer__element-title">Phones</p>
         <ul class="footer__element-list">
           <li class="footer__element-item">
-            <a href="tel: +380 (67) 676 53 24" class="footer__element-link">
+            <a class="footer__element-link" href="tel:+380676765324" >
               +380 (67) 676 53 24
             </a>
           </li>
           <li class="footer__element-item">
-            <a href="tel: +380 (67) 884 65 42" class="footer__element-link">
+            <a class="footer__element-link" href="tel:+380678846542">
               +380 (67) 884 65 42
             </a>
           </li>
@@ -53,12 +53,12 @@
         <p class="footer__element-title">Emails</p>
         <ul class="footer__element-list">
           <li class="footer__element-item">
-            <a href="mailto: office@boss.com" class="footer__element-link">
+            <a href="mailto:office@boss.com" class="footer__element-link">
               office@boss.com
             </a>
           </li>
           <li class="footer__element-item">
-            <a href="mailto: sales@boss.com" class="footer__element-link">
+            <a href="mailto:sales@boss.com" class="footer__element-link">
               sales@boss.com
             </a>
           </li>
@@ -66,32 +66,30 @@
       </div>
       <div class="footer__element">
         <p class="footer__element-title">Sign-up for our newsletter</p>
-        <ul class="footer__element-list">
           <form class="footer__form" action="">
-            <input class="footer__form-input" type="text" placeholder="Enter your email">
-            <button class="footer__form-btn" type="submit">
+            <input class="footer__form-input" name="email" type="email" placeholder="Enter your email" required>
+            <button class="footer__form-btn" type="submit" aria-label="submit email">
               <svg width="15" height="11">
                 <use xlink:href="images/sprite.svg#envelop"></use>
               </svg>
             </button>
           </form>
-        </ul>
       </div>
       <div class="footer__element">
         <div class="footer__element-social">
           <p class="footer__element-title">Social</p>
           <ul class="footer__social-list">
             <li class="footer__social-item">
-              <a href="#" class="footer__social-link">
+              <a class="footer__social-link" href="#" rel="noopener noreferrer" target="_blank" aria-label="our facebook">
                 <svg width="24" height="24">
                   <use xlink:href="images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="#" class="footer__social-link">
+              <a class="footer__social-link" href="#" rel="noopener noreferrer" target="_blank" aria-label="our instagram">
                 <svg width="24" height="24">
-                  <use xlink:href="images/sprite.svg#instagram"></use>
+                  <use xlink:href="images/sprite.svg#instagram" aria-label="our instagram"></use>
                 </svg>
               </a>
             </li>
@@ -106,23 +104,17 @@
         <p class="footer__copy">©Boss. All rights reserved.</p>
         <ul class="footer__bottom-list">
           <li class="footer__bottom-item">
-            <a href="#" class="footer__bottom-link">Privacy Policy</a>
+            <a class="footer__bottom-link" href="#" >Privacy Policy</a>
           </li>
           <li class="footer__bottom-item">
-            <a href="#" class="footer__bottom-link">Refund policy</a>
+            <a class="footer__bottom-link" href="#">Refund policy</a>
           </li>
           <li class="footer__bottom-item">
-            <a href="#" class="footer__bottom-link">Terms of Service</a>
+            <a class="footer__bottom-link" href="#">Terms of Service</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
 </footer>
-
 </div>
-
-<script src="js/main.min.js"></script>
-</body>
-
-</html>

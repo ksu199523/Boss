@@ -2,6 +2,7 @@ $color-accent: #0F2B41;
 $color-primary: #161515;
 $color-text: #4F4F4F;
 $bg-promo: #CDCDCD;
+$accent-text: #fff;
 
 %opensans-300{
   font-family: 'OpenSans-Light',sans-serif;
@@ -27,12 +28,7 @@ $bg-promo: #CDCDCD;
   font-family: 'Lora-Medium',serif;
   font-weight: 500;
 }
-%button-reset{
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
+
 
 
 
