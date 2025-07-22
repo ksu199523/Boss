@@ -675,3 +675,55 @@ body {
     display: none;
   }
 }
+
+.appointment {
+  padding: 50px 0 100px;
+  color: vars.$color-text;
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 77px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__content-form {
+    max-width: 541px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content-title {
+    @extend %lora-400;
+    font-size: 30px;
+    margin-bottom: 80px;
+  }
+
+  &__content-text {
+    @extend %opensans-700;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__content-input {
+    padding: 20px 360px 10px 0;
+    border-bottom: 1px solid vars.$color-text;
+  }
+
+  &__content-btn {
+    padding: 12px 244px;
+    display: inline-block;
+    margin-top: auto;
+  }
+
+  &__content-img {
+    max-width: 540px;
+    width: 100%;
+  }
+}
+
