@@ -32,7 +32,7 @@
               Explore the full selection today.
             </p>
           </div>
-          <a class="new-collection__btn" href="#">View the collection</a>
+          <a class="new-collection__btn link__more" href="#">View the collection</a>
         </div>
         <picture class="new-collection__img">
           <source srcset="images/new-collection-1.avif" type="image/avif">
@@ -65,10 +65,10 @@
           Sign up and get 10% discount on your first purchase!
         </p>
         <form class="join-us__form" action="">
-          <input class="join-us__input" type="text" placeholder="First Name">
-          <input class="join-us__input" type="email" placeholder="Email">
+          <input class="join-us__input" type="text" name="first name" placeholder="First Name">
+          <input class="join-us__input" type="email" name="home email" placeholder="Email">
         </form>
-        <button class="join-us__btn" type="submit">GET 10%</button>
+        <button class="join-us__btn btn_sumbit" type="submit">GET 10%</button>
         <p class="join-us__caption">
           *By compleating this form you are signing up to receive our emails and can unsubscribe at any time.
         </p>
@@ -109,7 +109,7 @@
               <source srcset="images/home-reviews.webp" type="image/webp">
               <img src="images/home-reviews.jpg" alt="David Beckham in a classic Boss suit">
             </picture>
-            <a class="home-reviews__box-link" href="#">
+            <a class="home-reviews__box-link link__more" href="#">
               Show more
             </a>
           </div>
@@ -178,28 +178,28 @@
           <picture>
             <source srcset="images/our-blog-1.avif" type="image/avif">
             <source srcset="images/our-blog-1.webp" type="image/webp">
-            <img class="our-blog__content__img" src="images/our-blog-1.jpg" alt="Man in classic suit Boss holds himself by the tie">
+            <img class="our-blog__content-img" src="images/our-blog-1.jpg" alt="Man in classic suit Boss holds himself by the tie">
           </picture>
           <p class="our-blog__content-caption">
             Top Trends in Modern Design You Need to Know
           </p>
-          <p class="our-blog__content-date">
+          <time class="our-blog__content-date" datetime="2025-05-20">
             Monday, 20 May 2025
-          </p>
+          </time>
         </div>
         <div class="our-blog__box">
           <picture>
             <source srcset="images/our-blog-2.avif" type="image/avif">
             <source srcset="images/our-blog-2.webp" type="image/webp">
-            <img src="images/our-blog-2.jpg" alt="David Beckham in stylish clothes Boss on the background of the sea">
+            <img class="our-blog__box-img" src="images/our-blog-2.jpg" alt="David Beckham in stylish clothes Boss on the background of the sea">
           </picture>
-          <p class="our-blog__box-date">
+          <time class="our-blog__box-date" datetime="2025-04-16">
             Tuesday, 16 April 2025
-          </p>
+          </time>
           <p class="our-blog__box-caption">
             "How to Elevate Your Style with Timeless Pieces"
           </p>
-          <a class="our-blog__box-link" href="#">
+          <a class="our-blog__box-link link__more" href="#">
             Show more
           </a>
         </div>
@@ -207,5 +207,5 @@
     </div>
   </section>
 </main>
-<!--=include script.html -->
 <!--=include footer.html -->
+<!--=include script.html -->

@@ -47,12 +47,18 @@ button {
   cursor: pointer;
 }
 
-input,
+input{
+ font: inherit; 
+ display: block;
+ border: none;
+}
+
 button,
 textarea,
 select {
   font: inherit;
 }
+
 address{
   font-style: normal;
 }
