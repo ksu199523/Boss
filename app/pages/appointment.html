@@ -10,13 +10,17 @@
           <h2 class="appointment__content-title">CONTACT INFORMATHION</h2>
           <p class="appointment__content-text">Fill in your contact details</p>
           <form class="appointment__content-form" action="">
-            <input class="appointment__content-input" type="text" name="first name appointment"
+            <label for="first-name-appointment" aria-label="enter your first name"></label>
+            <input class="appointment__content-input" id="first-name-appointment" type="text" name="first name appointment"
               placeholder="First name">
-            <input class="appointment__content-input" type="text" name="last name appointment" placeholder="Last name">
-            <input class="appointment__content-input" type="email" name="email appointment" placeholder="Email">
-            <input class="appointment__content-input" type="phone" name="phone appointment" placeholder="Mobile">
+              <label for="last-name-appointment" aria-label="enter your last name"></label>
+            <input class="appointment__content-input" id="last-name-appointment" type="text" name="last name appointment" placeholder="Last name">
+            <label for="email-appointment" aria-label="enter your email"></label>
+            <input class="appointment__content-input" id="email-appointment" type="email" name="email appointment" placeholder="Email">
+            <label for="phone-appointment" aria-label="enter your phone"></label>
+            <input class="appointment__content-input" id="phone-appointment" type="tel" name="phone appointment" placeholder="Mobile">
           </form>
-          <button class="appointment__content-btn btn_sumbit" type="submit">SEND</button>
+          <button class="btn-sumbit appointment__content-btn" type="submit">SEND</button>
         </div>
         <picture>
           <source srcset="images/appointment-img.avif" type="image/avif">

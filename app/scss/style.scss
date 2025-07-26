@@ -1,6 +1,7 @@
 @use 'reset';
 @use 'vars';
 @use 'fonts';
+@use '../../node_modules/swiper/swiper-bundle.css';
 @use 'global';
 
 body {
@@ -11,13 +12,13 @@ body {
   background-color: vars.$accent-text;
 }
 
-.link__more {
+.link-more {
   display: inline-block;
   border: 1px solid vars.$color-primary;
   margin-top: auto;
 }
 
-.btn_sumbit {
+.btn-sumbit {
   background-color: vars.$color-primary;
   color: vars.$accent-text;
   font-size: 20px;
@@ -42,8 +43,10 @@ body {
 
   &__lang {
     display: flex;
+  }
 
-    &-link--active {
+  &__lang-link {
+    &--active {
       @extend %opensans-700;
     }
   }
@@ -165,7 +168,7 @@ body {
 
   &__box-img {
     position: absolute;
-    right: -25px;
+    right: 75px;
     top: 0;
   }
 
@@ -333,9 +336,10 @@ body {
   }
 
   &__btn {
-    padding: 12px 248px;
+    padding: 12px;
     white-space: nowrap;
     margin-bottom: 20px;
+    width: 100%;
   }
 
   &__caption {
@@ -386,11 +390,15 @@ body {
   &__box {
     display: flex;
     flex-direction: column;
+    max-width: 578px;
+    width: 100%;
   }
 
   &__box-link {
-    padding: 10px 246px;
+    padding: 10px;
     white-space: nowrap;
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -534,7 +542,7 @@ body {
   }
 
   &__item {
-    color: vars.$color-text;
+    color: vars.$bg-promo;
     position: relative;
   }
 
@@ -671,7 +679,7 @@ body {
     align-items: center;
   }
 
-  &__arrow-disable{
+  &__arrow-disable {
     display: none;
   }
 }
@@ -679,6 +687,7 @@ body {
 .appointment {
   padding: 50px 0 100px;
   color: vars.$color-text;
+
   &__title {
     @extend %lora-400;
     font-size: 45px;
@@ -711,14 +720,16 @@ body {
   }
 
   &__content-input {
-    padding: 20px 360px 10px 0;
+    padding: 20px 10px 10px 0;
     border-bottom: 1px solid vars.$color-text;
+    width: 100%;
   }
 
   &__content-btn {
-    padding: 12px 244px;
+    padding: 12px;
     display: inline-block;
     margin-top: auto;
+    width: 100%;
   }
 
   &__content-img {
@@ -727,3 +738,234 @@ body {
   }
 }
 
+.product {
+  padding-bottom: 150px;
+
+  &__inner {
+    grid-template-columns: 2fr 1.1fr;
+    gap: 40px;
+    padding-right: 40px;
+
+  }
+
+  &__images {
+    gap: 20px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+
+    picture:nth-child(2) {
+      grid-row: span 2;
+    }
+  }
+
+  &__img {
+    max-width: max-content;
+  }
+
+  &__content {
+    dl {
+      margin-left: 0;
+    }
+
+    dd {
+      margin-left: 0;
+    }
+
+    position: relative;
+    margin-top: 90px;
+  }
+
+  &__content-title {
+    position: absolute;
+    top: -90px;
+    @extend %lora-400;
+    font-size: 45px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    @extend %opensans-700;
+    font-size: 25px;
+    color: vars.$color-text;
+  }
+
+  &__content-list {
+    color: vars.$color-text;
+    line-height: 1.4;
+  }
+
+  &__content-term {
+    @extend %opensans-700;
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  &__content-difinition {
+    margin-bottom: 30px;
+  }
+
+  &__content-radio {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__content-text {
+    margin-bottom: 30px;
+    max-width: 398px;
+    width: 100%;
+  }
+
+  &__content-checkbox {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__buttons {
+    display: grid;
+    gap: 6px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: 1px solid vars.$color-text;
+    color: vars.$color-text;
+    border-radius: 3px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+  }
+
+  &__btn-addtobag {
+    grid-column: 1 / -1;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+}
+
+.radio-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 26px;
+
+  &:checked+.radio-style::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: vars.$color-primary;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+}
+
+.radio-style {
+  position: absolute;
+  margin-left: -26px;
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid vars.$color-primary;
+
+}
+
+.check-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 20px;
+
+  &:checked+.check-style::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    background-color: vars.$color-primary;
+    border-radius: 1px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+}
+
+.check-style {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  border: 1px solid vars.$color-primary;
+
+}
+
+.radio-label {
+  padding-left: 26px;
+}
+
+.checkbox-label {
+  padding-left: 20px;
+}
+
+.lookperfect {
+  padding-bottom: 90px;
+
+  &__title {
+    max-width: 890px;
+    width: 100%;
+    margin: 0 auto;
+    @extend %lora-400;
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 2px solid vars.$bg-promo;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__slider {
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    max-width: 972px;
+    padding: 0 30px;
+  }
+
+  &__slide-caption {
+    font-size: 20px;
+    color: vars.$color-text;
+    text-align: center;
+    margin: 20px 0 20px;
+  }
+
+  &__slide-price {
+    @extend %opensans-700;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 35%;
+    z-index: 10;
+    color: vars.$color-text;
+  }
+
+  &__arrow-next {
+    right: 6px;
+  }
+
+  &__arrow-prev {
+    left: 6px;
+  }
+}
