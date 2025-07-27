@@ -29,7 +29,20 @@ $accent-text: #fff;
   font-weight: 500;
 }
 
+%dflex-center{
+  display: flex;
+  justify-content: center;
+}
 
+%dflex-sbetween{
+  display: flex;
+  justify-content: space-between;
+}
+
+%dflex-column{
+  display: flex;
+  flex-direction: column;
+}
 
 
 
