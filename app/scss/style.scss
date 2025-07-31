@@ -995,10 +995,6 @@ body {
   }
 }
 
-.blog-breadcrumbs {
-  @extend %dflex-center;
-  margin-bottom: -40px;
-}
 
 .blog-main {
   margin-bottom: 32px;
@@ -1162,11 +1158,15 @@ body {
   }
 }
 
-.blog-one {
-  &__breadcrumbs {
-    @extend %dflex-center;
-  }
+.center-breadcrumbs {
+  @extend %dflex-center;
 
+  span {
+    margin: -50px 0 -40px;
+  }
+}
+
+.blog-one {
   &__content {
     padding-bottom: 50px;
 
@@ -1275,4 +1275,139 @@ body {
     gap: 4px;
     align-items: center;
   }
+}
+
+.rewiews {
+  padding: 10px 0 60px;
+
+  &__top {
+    @extend %dflex-sbetween;
+    margin-bottom: 60px;
+    align-items: center;
+  }
+
+  &__top-title {
+    @extend %lora-400;
+    font-size: 64px;
+    line-height: 1.2;
+  }
+
+  &__top-link {
+    font-size: 24px;
+    color: rgba(vars.$color-primary, 0.4);
+    border-bottom: 1px solid vars.$color-primary;
+  }
+
+  &__content-box {
+    padding: 40px 50px;
+    border: 1px solid rgba(22, 24, 21, 0.15);
+    margin-bottom: 20px;
+  }
+
+  &__content-date {
+    font-size: 14px;
+    opacity: 0.4;
+    position: relative;
+
+    span {
+      margin-right: 20px;
+    }
+
+    span::after {
+      content: '|';
+      position: absolute;
+      padding: 0 8px;
+      top: 0;
+    }
+
+    margin-bottom: 16px;
+  }
+
+  &__content-grade {
+    gap: 10px;
+    margin-bottom: 18px;
+    align-items: center;
+  }
+
+  &__content-box-wrapper {
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__content-box-name {
+    font-size: 24px;
+  }
+
+  &__content-text {
+    max-width: 905px;
+  }
+
+  &__content-img {
+    margin-top: 40px;
+    gap: 10px;
+  }
+
+  &__slider {
+    overflow: hidden;
+    margin-top: -60px;
+    margin-bottom: 24px;
+  }
+
+  &__slider-nav {
+    position: absolute;
+    max-width: 1520px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 24px;
+    cursor: pointer;
+  }
+
+  &__arrow-prev {
+    right: 130px;
+  }
+
+  &__arrow-next {
+    right: 0;
+  }
+
+  &__pagination {
+    position: absolute;
+    top: 20px;
+    right: 44px;
+    left: auto;
+    width: auto;
+    color: rgba(vars.$color-primary, 0.4);
+
+    .swiper-pagination-current {
+      color: vars.$color-primary;
+      display: inline-block;
+      padding-right: 10px;
+    }
+
+    span+span {
+      padding-left: 10px;
+    }
+  }
+
+  &__content-link {
+    display: inline-block;
+    color: rgba(vars.$color-primary, 0.4);
+    border-bottom: 1px solid vars.$color-primary;
+  }
+
+  &__box-link {
+    padding: 24px 216px;
+    text-transform: uppercase;
+    border: 1px solid vars.$color-primary;
+  }
+}
+
+.slider-grade {
+  margin-bottom: 48px;
 }
