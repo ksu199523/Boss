@@ -2,13 +2,11 @@
 <!--=include promo.html -->
 <!--=include header.html -->
 <main class="main">
-  <div class="center-breadcrumbs">
-    <span>
-    <!--=include breadcrumbs.html -->
-    </span>
-  </div>
   <section class="blog-main">
     <div class="container-big">
+      <div class="blog-main__breadcrumbs">
+        <!--=include breadcrumbs.html -->
+      </div>
       <div class="blog-main__inner d-flex">
         <picture>
           <source srcset="images/blog-top.avif" type="image/avif">
@@ -61,14 +59,14 @@
         </search>
         <ul class="blog__nav-btns d-flex">
           <li class="blog__nav-item">
-            <button class="blog__nav-btn">
+            <button class="blog__nav-btn" type="button" aria-label="view content grid">
               <svg width="40" height="40">
                 <use xlink:href="images/sprite.svg#grid-btn"></use>
               </svg>
             </button>
           </li>
           <li class="blog__nav-item">
-            <button class="blog__nav-btn">
+            <button class="blog__nav-btn" type="button" aria-label="view content line">
               <svg width="40" height="40">
                 <use xlink:href="images/sprite.svg#line-btn"></use>
               </svg>
@@ -193,21 +191,21 @@
             </div>
           </article>
           <article class="blog__item">
-  <a class="blog__item-link-img" href="#">
-    <picture>
-      <source srcset="images/blog-8.avif" type="image/avif">
-      <source srcset="images/blog-8.webp" type="image/webp">
-      <img src="images/blog-8.jpg" alt="David Beckham in a Boss coat">
-    </picture>
-  </a>
-  <div class="blog__item-content">
-    <p class="blog__item-category">Modern</p>
-    <a href="#">
-      <h3 class="blog__item-title">Redefining Modern Masculinity with BOSS and David Beckham</h3>
-    </a>
-    <p class="blog__item-date">2 weeks ago</p>
-  </div>
-</article>
+            <a class="blog__item-link-img" href="#">
+              <picture>
+                <source srcset="images/blog-8.avif" type="image/avif">
+                <source srcset="images/blog-8.webp" type="image/webp">
+                <img src="images/blog-8.jpg" alt="David Beckham in a Boss coat">
+              </picture>
+            </a>
+            <div class="blog__item-content">
+              <p class="blog__item-category">Modern</p>
+              <a href="#">
+                <h3 class="blog__item-title">Redefining Modern Masculinity with BOSS and David Beckham</h3>
+              </a>
+              <p class="blog__item-date">2 weeks ago</p>
+            </div>
+          </article>
         </div>
       </div>
       <!--=include pagination.html -->

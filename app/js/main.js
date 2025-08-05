@@ -14,7 +14,7 @@ const swiper = new Swiper('.lookperfect__slider', {
 const rewiewsswiper = new Swiper('.rewiews__slider', {
 
   loop: true,
-  slidesPerView: 8,
+  slidesPerView: 8.5,
   spaceBetween: 10,
   
   navigation: {

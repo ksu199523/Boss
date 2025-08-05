@@ -500,7 +500,7 @@ body {
 }
 
 .breadcrumbs {
-  padding: 50px 0 90px;
+  padding: 10px 0 10px;
 
   &__list {
     gap: 16px;
@@ -701,6 +701,10 @@ body {
 
 .product {
   padding-bottom: 150px;
+
+  &__breadcrumbs {
+    margin: 16px 0 70px;
+  }
 
   &__inner {
     grid-template-columns: 2fr 1.1fr;
@@ -999,6 +1003,11 @@ body {
 .blog-main {
   margin-bottom: 32px;
 
+  &__breadcrumbs {
+    @extend %dflex-center;
+    margin: 10px 0 50px;
+  }
+
   &__inner {
     gap: 40px;
     padding: 40px 0 40px;
@@ -1158,15 +1167,12 @@ body {
   }
 }
 
-.center-breadcrumbs {
-  @extend %dflex-center;
-
-  span {
-    margin: -50px 0 -40px;
-  }
-}
-
 .blog-one {
+  &__breadcrumbs {
+    @extend %dflex-center;
+    margin: 10px 0 50px;
+  }
+
   &__content {
     padding-bottom: 50px;
 
@@ -1279,6 +1285,11 @@ body {
 
 .rewiews {
   padding: 10px 0 60px;
+
+  &__breadcrumbs {
+    @extend %dflex-center;
+    margin: 10px 0 60px;
+  }
 
   &__top {
     @extend %dflex-sbetween;
