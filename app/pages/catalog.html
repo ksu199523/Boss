@@ -2,7 +2,316 @@
 <!--=include promo.html -->
 <!--=include header.html -->
 <main class="main">
-
+  <section class="catalog">
+    <div class="container">
+      <div class="catalog__breadcrums">
+        <!--=include breadcrumbs.html -->
+      </div>
+      <div class="catalog__nav">
+        <div class="catalog__nav-buttons d-flex ai-center">
+          <p class="catalog__nav-text">View as</p>
+          <ul class="catalog__nav-list d-flex ">
+            <li class="catalog__nav-item">
+              <button class="catalog__nav-btn view-mode__btn-grid" type="button" aria-label="view content grid">
+                <svg width="20" height="20">
+                  <use xlink:href="images/sprite.svg#catalog-grid"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="catalog__nav-item">
+              <button class="catalog__nav-btn view-mode__btn-line" type="button" aria-label="view content line">
+                <svg width="20" height="20">
+                  <use xlink:href="images/sprite.svg#catalog-line"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <h1 class="catalog__nav-title">BECKHAM COLLECTION</h1>
+        <form class="catalog__nav-form" action="">
+          <div class="catalog__nav-wrapper">
+            <select class="catalog__select" name="category">
+              <option selected disabled>Sort by popularity</option>
+              <option value="price">Sort by price</option>
+              <option value="popularity">Sort by popularity</option>
+              <option value="price">Sort by price</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="catalog__content d-flex">
+        <aside class="catalog__filter">
+          <form class="catalog__filter-form" action="">
+             <div class="catalog__filterbox">
+              <p class="catalog__filterbox-title">PRICE</p>
+              <div class="catalog__filterbox-items--range">
+                <div class="range">
+                  <div class="range__inputs">
+                    <label class="range__label">
+                      <input class="range__min" type="number" min="300" max="3000" step="100">
+                    </label>
+                    -
+                    <label class="range__label">
+                      <input class="range__max" type="number" min="300" max="3000" step="100">
+                    </label>
+                  </div>
+                  <div class="range__slider">
+                  </div>
+                  <ul class="range__list">
+                      <li class="range__item">300</li>
+                      <li class="range__item">1000</li>
+                      <li class="range__item">1500</li>
+                      <li class="range__item">2000</li>
+                      <li class="range__item">2500</li>
+                      <li class="range__item">3000</li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+            <div class="catalog__filterbox">
+              <p class="catalog__filterbox-title">SIZE</p>
+              <div class="catalog__filterbox-items">
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  XS
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  S
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  M
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  L
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  XL
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  XXL
+                </label>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <p class="catalog__filterbox-title">COLOR</p>
+              <div class="catalog__filterbox-items">
+                <label class="radio-label">
+                  <input class="radio-box" type="radio">
+                  <span class="radio-style"></span>
+                  blue
+                </label>
+                <label class="radio-label">
+                  <input class="radio-box" type="radio">
+                  <span class="radio-style"></span>
+                  black
+                </label>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <p class="catalog__filterbox-title">MATERIAL</p>
+              <div class="catalog__filterbox-items">
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  WOOL
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  COTTON
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  LEATHER
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  JERSEY
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  LINEN
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  CASHMERE
+                </label>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <p class="catalog__filterbox-title">STYLE</p>
+              <div class="catalog__filterbox-items catalog__filterbox-items--line">
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  ALL
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  BOHO
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  ROMANTIC
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  ELEGANT
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  VINTAGE
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  SIMPLE
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  MODERN
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  FORMAL
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  GLAMOROUS
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  MODEST
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  CASUAL
+                </label>
+                <label class="checkbox-label">
+                  <input class="check-box" type="checkbox">
+                  <span class="check-style"></span>
+                  BEACH
+                </label>
+              </div>
+            </div>
+            <button class="catalog__filter-clean" type="reset">clean all</button>
+          </form>
+        </aside>
+        <div class="catalog__content-box">
+        <div class="catalog__items view-mode view-mode--grid ">
+          <div class="catalog__item">
+            <picture>
+              <source srcset="images/catalog-1.avif" type="image/avif">
+              <source srcset="images/catalog-1.webp" type="image/webp">
+              <img src="images/catalog-1.jpg" alt="David Beckham in stylish clothes Boss">
+            </picture>
+            <p class="catalog__item-title">LEATHER TRAINERS </p>
+            <p class="catalog__item-price">€ 299,00</p>
+          </div>
+          <div class="catalog__item">
+            <picture>
+              <source srcset="images/catalog-2.avif" type="image/avif">
+              <source srcset="images/catalog-2.webp" type="image/webp">
+              <img src="images/catalog-2.jpg" alt="David Beckham in Boss сasuals">
+            </picture>
+            <p class="catalog__item-title">T-SHIRT IN SOFT LINEN </p>
+            <p class="catalog__item-price">€ 139,95</p>
+          </div>
+          <div class="catalog__item">
+            <picture>
+              <source srcset="images/catalog-3.avif" type="image/avif">
+              <source srcset="images/catalog-3.webp" type="image/webp">
+              <img src="images/catalog-3.jpg" alt="David Beckham in stylish clothes Boss clothes Boss sits by the pool">
+            </picture>
+            <p class="catalog__item-title">TROUSERS IN COTTON </p>
+            <p class="catalog__item-price">€ 249,00</p>
+          </div>
+          <div class="catalog__item">
+            <picture>
+              <source srcset="images/catalog-4.avif" type="image/avif">
+              <source srcset="images/catalog-4.webp" type="image/webp">
+              <img src="images/catalog-4.jpg" alt="David Beckham in a Boss coat">
+            </picture>
+            <p class="catalog__item-title">TROUSERS IN WOOL SERGE </p>
+            <p class="catalog__item-price">€ 209,00</p>
+          </div>
+          <div class="catalog__item">
+            <picture>
+              <source srcset="images/catalog-5.avif" type="image/avif">
+              <source srcset="images/catalog-5.webp" type="image/webp">
+              <img src="images/catalog-5.jpg" alt="David Beckham in Boss Casuals and Boss White Shirt">
+            </picture>
+            <p class="catalog__item-title">BOMBER JACKET </p>
+            <p class="catalog__item-price">€ 899,00</p>
+          </div>
+          <div class="catalog__item">
+            <picture>
+              <source srcset="images/catalog-6.avif" type="image/avif">
+              <source srcset="images/catalog-6.webp" type="image/webp">
+              <img src="images/catalog-6.jpg" alt="David Beckham in white casual Boss sits on pier">
+            </picture>
+            <p class="catalog__item-title">T-SHIRT IN COTTON </p>
+            <p class="catalog__item-price">€ 159,95</p>
+          </div>
+          <div class="catalog__item">
+            <picture>
+              <source srcset="images/catalog-7.avif" type="image/avif">
+              <source srcset="images/catalog-7.webp" type="image/webp">
+              <img src="images/catalog-7.jpg" alt="David Beckham in a navy blue Boss tracksuit">
+            </picture>
+            <p class="catalog__item-title">TROUSERS IN STRETCH </p>
+            <p class="catalog__item-price">€ 249,00</p>
+          </div>
+          <div class="catalog__item">
+            <picture>
+              <source srcset="images/catalog-8.avif" type="image/avif">
+              <source srcset="images/catalog-8.webp" type="image/webp">
+              <img src="images/catalog-8.jpg" alt="David Beckham in dark blue tracksuit Boss black and white photo">
+            </picture>
+            <p class="catalog__item-title">BLEND JACKET </p>
+            <p class="catalog__item-price">€ 449,00</p>
+          </div>
+          <div class="catalog__item">
+            <picture>
+              <source srcset="images/catalog-9.avif" type="image/avif">
+              <source srcset="images/catalog-9.webp" type="image/webp">
+              <img src="images/catalog-9.jpg" alt="David Beckham in a Boss coat black and white photo">
+            </picture>
+            <p class="catalog__item-title">SLIM-FIT COAT IN CASHMERE </p>
+            <p class="catalog__item-price">€ 1.700,00</p>
+          </div>
+         </div>    
+      <!--=include pagination.html -->
+        </div>
+      
+      </div>
+     
+    </div>
+  </section>
 </main>
 <!--=include footer.html -->
 <!--=include script.html -->
