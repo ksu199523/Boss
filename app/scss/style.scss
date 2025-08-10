@@ -4,6 +4,7 @@
 @use '../../node_modules/swiper/swiper-bundle.css';
 @use '../../node_modules/nouislider/dist/nouislider.css';
 @use 'global';
+@use 'media';
 
 body {
   @extend %opensans-400;
@@ -39,6 +40,14 @@ body {
     margin-bottom: 32px;
   }
 
+  &__btn{
+    display: none;
+  }
+
+  &__lang{
+    margin-right: 215px;
+  }
+
   &__lang-link {
     &--active {
       @extend %opensans-700;
@@ -51,6 +60,7 @@ body {
 }
 
 .menu {
+  display: flex;
   &__list {
     gap: 30px;
   }
@@ -106,6 +116,7 @@ body {
 .new-collection {
   &__inner {
     padding: 150px 40px 90px;
+    gap: 40px;
   }
 
   &__content {
@@ -137,9 +148,12 @@ body {
     align-self: flex-start;
   }
 
+  &__btn-mobail{
+    display: none;
+  }
+
   &__img {
     margin-top: 75px;
-    margin-left: 40px;
   }
 
   &__box {
@@ -234,6 +248,7 @@ body {
   }
 
   &__social-list {
+    display: flex;
     gap: 10px;
   }
 
@@ -294,6 +309,7 @@ body {
     @extend %lora-400;
     font-size: 30px;
     margin-bottom: 20px;
+    text-align: left;
   }
 
   &__form {

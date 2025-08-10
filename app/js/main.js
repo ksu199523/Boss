@@ -1,3 +1,12 @@
+
+  const headerBtn = document.querySelector('.header__btn');
+  const menu = document.querySelector('.menu');
+
+    headerBtn.addEventListener('click', () => {
+      console.log('Кнопка нажата');
+    menu.classList.toggle('menu--active');
+    });
+
   const viewMode = document.querySelector('.view-mode');
   const modeBtnGrid = document.querySelector('.view-mode__btn-grid');
   const modeBtnLine = document.querySelector('.view-mode__btn-line');
