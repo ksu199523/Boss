@@ -11,12 +11,12 @@
   const modeBtnGrid = document.querySelector('.view-mode__btn-grid');
   const modeBtnLine = document.querySelector('.view-mode__btn-line');
 
-  modeBtnGrid.addEventListener('click', () => {
+  modeBtnGrid?.addEventListener('click', () => {
     viewMode.classList.add('view-mode--grid')
     viewMode.classList.remove('view-mode--line')
   })
 
-  modeBtnLine.addEventListener('click', () => {
+  modeBtnLine?.addEventListener('click', () => {
     viewMode.classList.add('view-mode--line')
     viewMode.classList.remove('view-mode--grid')
   });
@@ -48,6 +48,21 @@ const rewiewsswiper = new Swiper('.rewiews__slider', {
   pagination: {
     el: ".rewiews__pagination",
     type: "fraction",
+      },
+
+      breakpoints: {
+        200: {
+          slidesPerView: 2.5,
+          spaceBetween: 10,
+        },
+        360: {
+          slidesPerView: 4.5,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 6.5,
+          spaceBetween: 10,
+        },
       },
 });  
 

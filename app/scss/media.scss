@@ -37,8 +37,9 @@
       grid-template-columns: 1fr 1fr 1.5fr;
     }
   }
-  .appointment{
-    .appointment__content{
+
+  .appointment {
+    .appointment__content {
       gap: 20px;
     }
   }
@@ -62,8 +63,8 @@
 
       .top__title {
         font-size: 55px;
-      }  
-     
+      }
+
     }
 
     .home-reviews {
@@ -73,9 +74,10 @@
     .our-blog {
       padding: 70px 0 50px;
     }
-      .appointment{
+
+    .appointment {
       padding: 0 0 100px;
-       }
+    }
   }
 
   .footer {
@@ -195,13 +197,21 @@
       grid-template-columns: 1fr 1fr 1.9fr;
     }
   }
-  .appointment{
-    .appointment__content-box{
-     max-width: 400px;
+
+  .appointment {
+    .appointment__content-box {
+      max-width: 400px;
     }
-    .appointment__content-img{
+
+    .appointment__content-img {
       min-height: 580px;
       object-fit: cover;
+    }
+  }
+
+  .rewiews {
+    .rewiews__top-title {
+      font-size: 60px;
     }
   }
 }
@@ -420,24 +430,45 @@
       max-width: 400px;
     }
   }
-   .appointment{
-    .appointment__content-box{
-     max-width: 300px;
+
+  .appointment {
+    .appointment__content-box {
+      max-width: 300px;
     }
-    .appointment__content-img{
+
+    .appointment__content-img {
       min-height: 500px;
       object-fit: cover;
     }
-    .appointment__title{
-     font-size: 30px; 
-     margin-bottom: 50px;
+
+    .appointment__title {
+      font-size: 30px;
+      margin-bottom: 50px;
     }
-    .appointment__content-title{
+
+    .appointment__content-title {
       font-size: 20px;
       margin-bottom: 30px;
     }
-    .appointment__content-text{
+
+    .appointment__content-text {
       font-size: 16px;
+    }
+  }
+
+  .rewiews {
+    .rewiews__top-title {
+      font-size: 36px;
+    }
+
+    .rewiews__top-link {
+      font-size: 16px;
+    }
+
+    .rewiews__box-link {
+      display: flex;
+      justify-content: center;
+      padding: 24px;
     }
   }
 }
@@ -601,21 +632,48 @@
       display: none;
     }
   }
-     .appointment{
-  .appointment__content{
-    flex-direction: column;
-    align-items: center;
-  }
-  .appointment__content-box{
-    order: 1;
-  }
-  .appointment__content-img{
-    order: 0;
-    min-height: 250px;
-  }
-   .appointment__title {
+
+  .appointment {
+    .appointment__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .appointment__content-box {
+      order: 1;
+    }
+
+    .appointment__content-img {
+      order: 0;
+      min-height: 250px;
+    }
+
+    .appointment__title {
       font-size: 20px;
       margin-bottom: 30px;
+    }
+  }
+
+  .rewiews {
+    .rewiews__top-title {
+      font-size: 20px;
+    }
+
+    .rewiews__top-link {
+      font-size: 14px;
+    }
+
+    .rewiews__content-grade {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .rewiews__content-link {
+      align-self: flex-start;
+    }
+
+    .pagination__list li:nth-child(n+5) {
+      display: none;
     }
   }
 }
