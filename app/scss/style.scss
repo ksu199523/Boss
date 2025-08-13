@@ -513,7 +513,7 @@ body {
 .collections-top {
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(100vh - 180px);
+  height: 100vh;
 }
 
 .breadcrumbs {
@@ -536,6 +536,10 @@ body {
 }
 
 .collections {
+  &__breadcrumbs{
+    padding: 40px 0 80px;
+  }
+
   &__title {
     @extend %lora-400;
     color: vars.$color-primary;
