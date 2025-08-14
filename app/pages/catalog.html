@@ -27,6 +27,9 @@
             </li>
           </ul>
         </div>
+         <button class="catalog__popup " type="button" aria-label="open filters">
+            Filter
+          </button>
         <h1 class="catalog__nav-title">BECKHAM COLLECTION</h1>
         <form class="catalog__nav-form" action="">
           <div class="catalog__nav-wrapper">
@@ -40,7 +43,15 @@
         </form>
       </div>
       <div class="catalog__content d-flex">
+        <div class="popup" aria-hidden="true">
+        <div class="popup__overlay"></div>
+        <div class="popup__content" role="dialog" aria-modal="true"> 
         <aside class="catalog__filter">
+          <button class="catalog__filter-del close-popup" type="button" aria-label="close modal">
+                <svg width="18" height="18">
+                  <use xlink:href="images/sprite.svg#checkout-del"></use>
+                </svg>
+              </button>
           <form class="catalog__filter-form" action="">
             <div class="catalog__filterbox">
               <p class="catalog__filterbox-title">PRICE</p>
@@ -221,6 +232,8 @@
             <button class="catalog__filter-clean" type="reset">clean all</button>
           </form>
         </aside>
+        </div>
+        </div>
         <div class="catalog__content-box">
           <div class="catalog__items view-mode view-mode--grid ">
             <div class="catalog__item">
