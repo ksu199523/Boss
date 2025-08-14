@@ -12,7 +12,8 @@ body {
   line-height: 1.3;
   color: vars.$color-primary;
   background-color: vars.$accent-text;
-  &.scroll-lock{
+
+  &.scroll-lock {
     overflow: hidden;
   }
 }
@@ -43,8 +44,41 @@ body {
     margin-bottom: 32px;
   }
 
+  &__btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+  }
+
   &__btn {
     display: none;
+    width: 40px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #000;
+      transition: transform .3s ease;
+    }
+  }
+
+  &__btn::after {
+    top: 0;
+  }
+
+  &__btn::before {
+    bottom: 0;
   }
 
   &__lang {
@@ -1491,10 +1525,12 @@ body {
     font-size: 45px;
     text-transform: uppercase;
   }
-  &__nav-filter{
+
+  &__nav-filter {
     display: none;
     color: vars.$color-text;
     position: relative;
+
     &::after {
       content: '';
       position: absolute;
@@ -1506,6 +1542,7 @@ body {
       right: -25px;
     }
   }
+
   &__nav-wrapper {
     position: relative;
 
@@ -1543,10 +1580,10 @@ body {
     border: 1px solid vars.$bg-promo;
   }
 
-  &__filter-del{
+  &__filter-del {
     display: none;
   }
-  
+
   &__filterbox {
     padding-bottom: 8px;
     margin-bottom: 40px;
@@ -2054,25 +2091,27 @@ body {
   }
 }
 
-.modal{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    padding: 0 10px;
-    background-color: rgba(vars.$color-primary, 0.2);
-    &[aria-hidden="false"]{
-      display: flex;
-    }
-  &__overlay{
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  padding: 0 10px;
+  background-color: rgba(vars.$color-primary, 0.2);
+
+  &[aria-hidden="false"] {
+    display: flex;
+  }
+
+  &__overlay {
     position: fixed;
     inset: 0;
     z-index: 100;
   }
 
-  &__content{
+  &__content {
     background-color: vars.$accent-text;
     position: relative;
     z-index: 101;
@@ -2155,30 +2194,37 @@ body {
     right: 0;
     top: 0;
   }
-  .order{
+
+  .order {
     border: none;
     padding: 0 10px 74px;
-    &__list{
+
+    &__list {
       margin-bottom: 40px;
     }
-    &__list-box{
+
+    &__list-box {
       margin-bottom: 10px;
       font-size: 16px;
+
       &:last-child {
         @extend %opensans-700;
         text-transform: uppercase;
         margin-top: 10px;
       }
     }
-    &__links{
+
+    &__links {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       text-transform: uppercase;
     }
-    &__link{
+
+    &__link {
       padding: 12px;
     }
-    &__link-buy{
+
+    &__link-buy {
       background-color: vars.$color-accent;
       color: vars.$accent-text;
       padding: 12px;
