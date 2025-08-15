@@ -58,7 +58,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 2;
+    z-index: 0;
 
     &::after,
     &::before {
@@ -192,6 +192,7 @@ body {
 
   &__img {
     margin-top: 75px;
+    object-fit: cover;
   }
 
   &__box {
@@ -440,6 +441,7 @@ body {
     position: absolute;
     bottom: 0;
     margin-left: auto;
+    object-fit: cover;
   }
 
   &__content {
@@ -503,6 +505,7 @@ body {
 
   &__content-img {
     margin-bottom: 20px;
+    object-fit: cover;
   }
 
   &__content-caption {
