@@ -107,8 +107,8 @@ headerBtn?.addEventListener('click', () => {
 
 
   const viewMode = document.querySelector('.view-mode');
-  const modeBtnGrid = document.querySelector('.view-mode__btn-grid');
-  const modeBtnLine = document.querySelector('.view-mode__btn-line');
+  const modeBtnGrid = document.querySelector('.view-mode-btn-grid');
+  const modeBtnLine = document.querySelector('.view-mode-btn-line');
 
   modeBtnGrid?.addEventListener('click', () => {
     viewMode?.classList.add('view-mode--grid');

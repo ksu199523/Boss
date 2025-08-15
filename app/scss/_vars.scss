@@ -4,48 +4,47 @@ $color-text: #4F4F4F;
 $bg-promo: #CDCDCD;
 $accent-text: #fff;
 
-%opensans-300{
-  font-family: 'OpenSans-Light',sans-serif;
+%opensans-300 {
+  font-family: 'OpenSans-Light', sans-serif;
   font-weight: 300;
 }
-%opensans-400{
-  font-family: 'OpenSans-Regular',sans-serif;
+
+%opensans-400 {
+  font-family: 'OpenSans-Regular', sans-serif;
   font-weight: 400;
 }
-%opensans-700{
-  font-family: 'OpenSans-Bold',sans-serif;
+
+%opensans-700 {
+  font-family: 'OpenSans-Bold', sans-serif;
   font-weight: 700;
 }
-%inter-400{
-  font-family: 'Inter-Regular',sans-serif;
+
+%inter-400 {
+  font-family: 'Inter-Regular', sans-serif;
   font-weight: 400;
 }
-%lora-400{
-  font-family: 'Lora-Regular',serif;
+
+%lora-400 {
+  font-family: 'Lora-Regular', serif;
   font-weight: 400;
 }
-%lora-500{
-  font-family: 'Lora-Medium',serif;
+
+%lora-500 {
+  font-family: 'Lora-Medium', serif;
   font-weight: 500;
 }
 
-%dflex-center{
+%dflex-center {
   display: flex;
   justify-content: center;
 }
 
-%dflex-sbetween{
+%dflex-sbetween {
   display: flex;
   justify-content: space-between;
 }
 
-%dflex-column{
+%dflex-column {
   display: flex;
   flex-direction: column;
 }
-
-
-
-
-
-
