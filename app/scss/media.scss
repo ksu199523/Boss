@@ -961,6 +961,7 @@
 
     .page-404__content-box {
       margin-top: 0;
+      align-items: center;
     }
 
     .page-404__content {
@@ -977,7 +978,11 @@
     .page-404__title {
       font-size: 60px;
     }
-
+    
+    .page-404__link{
+      align-items: center;
+    }
+    
     .page-404__link span {
       font-size: 16px;
     }
@@ -1036,6 +1041,7 @@
 
     .catalog__items {
       grid-template-columns: repeat(2, 1fr);
+      gap: 30px 10px;
     }
 
     .catalog__content {

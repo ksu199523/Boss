@@ -1101,6 +1101,7 @@ body {
 
     img {
       max-width: max-content;
+      object-fit: cover;
     }
   }
 
@@ -1224,6 +1225,10 @@ body {
     opacity: 0.4;
     margin-top: auto;
   }
+  &__item-img{
+    object-fit: cover;
+  }
+
 }
 
 .select {
